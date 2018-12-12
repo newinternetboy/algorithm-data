@@ -7,7 +7,6 @@
  */
 /**
  * 1 冒泡排序：将每个数字a和剩余其他数字b比较,(升序)如果a>b,那么交换a和b的位置
- * 2 轮次:n = count($arr),(1+...+n-1)轮
  * @param $arr
  */
 function bubblesort($arr){

@@ -8,7 +8,9 @@
 
 /**
  * Class HeapSort_1
- * 这个是自己理解透了之后重写的
+ * 这个是自己理解透了之后重写的，数组中节点和左右节点直接的索引关系
+ * $left = 2*$i + 1
+ * $right = $left + 1;
  */
 class HeapSort_1{
     protected $data;

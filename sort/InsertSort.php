@@ -53,3 +53,16 @@ class InsertSort{
 $arr = (new InsertSort([3,2,3,5,6,1,9,8,0.1]))->run();
 print_r($arr);
 
+/**
+ * 目前最简单的插入排序
+ */
+$data = [1,5,3,6];
+//增量为1的插入排序
+$final = count($data)-1;
+while($final > 0){
+    if($data[$final]<$data[$final-1]){
+        //swap
+        list($data[$final],$data[$final-1]) = [$data[$final-1],$data[$final]];
+    }
+    $final--;
+}

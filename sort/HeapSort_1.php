@@ -8,6 +8,7 @@
 
 /**
  * Class HeapSort_1
+ * 大堆排序特点：叶子结点不大于父节点
  * 这个是自己理解透了之后重写的，数组中节点和左右节点直接的索引关系
  * $left = 2*$i + 1
  * $right = $left + 1;
@@ -36,6 +37,9 @@ class HeapSort_1{
         $i = floor($this->count / 2) + 1;
         while ($i--){
             $this->buildHeap($this->data,$i,$this->count);
+            echo '###############'.$i."\n";
+            print_r($this->data);
+            echo '###############'.$i."\n";
         }
     }
 
@@ -44,7 +48,8 @@ class HeapSort_1{
             return ;
         }
         $max = $i;
-        $left = ($right = 2 * $i + 1) + 1;
+        //fix-节点构造
+        $left = ($right = 2 * $i + 2) - 1;
         //比较左节点与$i节点的大小
         if($left<$count && $data[$left] > $data[$max]){
             $max = $left;

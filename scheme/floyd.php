@@ -32,7 +32,7 @@ class Floyd{
                 for ($k=0;$k<$n;$k++){
                     //i-k-j<i-j
 //                    echo $i.'->'.$k.'->'.$j."\n";
-                    if(self::$map[$i][$k]<self::MAXINT && self::$map[$k][$j]<self::MAXINT & self::$map[$i][$k]+self::$map[$k][$j]<self::$map[$i][$j]){
+                    if(self::$map[$i][$k]<self::MAXINT && self::$map[$k][$j]<self::MAXINT && self::$map[$i][$k]+self::$map[$k][$j]<self::$map[$i][$j]){
                         $map_result[$i][$j] = $map_result[$i][$k]+$map_result[$k][$j];
                     }
                 }

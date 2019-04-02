@@ -26,3 +26,15 @@ function bubblesort($arr){
 }
 $result = bubblesort([2,1,3,9,5,6]);
 print_r($result);
+
+//practice  2019-04-02
+$arr = [3,2,1,8,3,2];
+$length = count($arr);
+for ($i=0;$i<$length;$i++){
+    for($j=0;$j<$length;$j++){
+        if($i!=$j && $arr[$i]<$arr[$j]){
+            list($arr[$j],$arr[$i]) = [$arr[$i],$arr[$j]];
+        }
+    }
+}
+print_r($arr);
